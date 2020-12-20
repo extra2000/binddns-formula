@@ -1,0 +1,4 @@
+binddns/files/zones.conf
+
+binddns/files/zones/*
+!binddns/files/zones/mynet.zone.example
