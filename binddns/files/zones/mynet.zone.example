@@ -1,0 +1,15 @@
+$TTL 86400
+
+@ IN SOA mynet. root.mynet. (
+    20201220  ;serial
+    3600  ;time to refresh
+    1800  ;time to retry
+    604800 ;time to expire
+    86400 ;minimum ttl
+)
+
+@ IN NS srv01.mynet.
+srv01 IN A 192.168.121.14
+
+@ IN NS srv02.mynet.
+srv02 IN A 192.168.121.106

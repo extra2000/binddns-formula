@@ -1,0 +1,66 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+RedHat:
+  user: named
+  group: named
+  pkg:
+    name: bind
+  service:
+    name: named.service
+  bind_config_file: /etc/named.conf
+  bind_config_rootdir: /etc/named
+  rfc1918_zone_file: /etc/named.rfc1912.zones
+  key_file: /etc/named.root.key
+  zone_hint_file: named.ca
+  managed_keys_directory: /var/named/dynamic
+  work_rootdir: /var/named
+  dump_file: /var/named/data/cache_dump.db
+  statistics_file: /var/named/data/named_stats.txt
+  memstatistics_file: /var/named/data/named_mem_stats.txt
+  secroots_file: /var/named/data/named.secroots
+  recursing_file: /var/named/data/named.recursing
+
+Debian:
+  user: bind
+  group: bind
+  pkg:
+    name: bind9
+  service:
+    name: bind9.service
+  bind_config_file: /etc/bind/named.conf
+  bind_config_rootdir: /etc/bind
+  rfc1918_zone_file: /etc/bind/zones.rfc1918
+  key_file: /etc/bind/bind.keys
+  zone_hint_file: /usr/share/dns/root.hints
+  managed_keys_directory: /var/cache/bind
+  work_rootdir: /var/cache/bind
+  dump_file: /var/cache/bind/data/cache_dump.db
+  statistics_file: /var/cache/bind/data/named_stats.txt
+  memstatistics_file: /var/cache/bind/data/named_mem_stats.txt
+  secroots_file: /var/cache/bind/data/named.secroots
+  recursing_file: /var/cache/bind/data/named.recursing
+
+Suse:
+  user: named
+  group: named
+  pkg:
+    name: bind
+  service:
+    name: named.service
+  bind_config_file: /etc/named.conf
+  bind_config_rootdir: /etc/named.d
+  rfc1918_zone_file: /etc/named.rfc1912.zones
+  key_file: /etc/named.root.key
+  zone_hint_file: root.hint
+  managed_keys_directory: /var/lib/named/dyn/
+  work_rootdir: /var/lib/named
+  dump_file: /var/log/named_dump.db
+  statistics_file: /var/log/named.stats
+  memstatistics_file: /var/log/named_mem_stats.txt
+  secroots_file: /var/lib/named/data/named.secroots
+  recursing_file: /var/lib/named/data/named.recursing
+
+Gentoo: {}
+Arch: {}
+Alpine: {}

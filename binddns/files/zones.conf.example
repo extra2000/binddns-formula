@@ -1,0 +1,4 @@
+zone "mynet" IN {
+        type master;
+        file "data/zones/mynet.zone";
+};

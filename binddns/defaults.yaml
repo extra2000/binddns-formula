@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+binddns:
+  listen:
+    ipv4:
+      ip: "any;"
+      port: 53
+    ipv6:
+      ip: "any;"
+      port: 53
+  allow_query: "any;"
+  allow_query_cache: "any;"
+  recursion: yes
+  dnssec:
+    enabled: yes
+    validation: yes
